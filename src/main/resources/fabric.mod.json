@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tpme",
+  "version": "${version}",
+  "name": "TpMe",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tpme/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.szucraft.tpme.client.TpMeClient"
+    ],
+    "main": [
+      "org.szucraft.tpme.TpMe"
+    ]
+  },
+  "mixins": [
+    "tpme.mixins.json",
+    {
+      "config": "tpme.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
